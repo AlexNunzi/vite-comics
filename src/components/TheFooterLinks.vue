@@ -209,7 +209,7 @@ export default{
 </template>
 
 <style lang="scss">
-@use "../styles/variables";
+@use "../styles/partials/variables";
 
 #footer-top{
     height: 20rem;

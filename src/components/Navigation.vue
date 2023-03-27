@@ -56,7 +56,7 @@
 </template>
 
 <style lang="scss">
-@use "../styles/variables";
+@use "../styles/partials/variables";
 
     .navigation-container{
         background-color: variables.$secondary-color;
