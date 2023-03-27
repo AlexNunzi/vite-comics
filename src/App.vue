@@ -98,4 +98,7 @@ main{
   color: #FFFFFF;
 }
 
+.fs-075{
+  font-size: 0.75rem;
+}
 </style>

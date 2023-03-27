@@ -141,12 +141,12 @@ export default{
     <div class="container h-100 d-flex justify-content-between">
         <ul id="footer-links-container" class="list-style-none">
 
-            <ul class="list-style-none" v-for="list in footerLinks">
+            <ul class="links-list list-style-none" v-for="list in footerLinks">
                 <li>
-                    <h4 class="links-head text-white">{{ list.heading }}</h4>
+                    <h3 class="links-head text-white">{{ list.heading.toUpperCase() }}</h3>
                 </li>
                 <li v-for="link in list.links">
-                    <a class="text-decoration-none terthiary-text-color" href="#">{{ link.text }}</a>
+                    <a class="text-decoration-none terthiary-text-color fs-075" href="#">{{ link.text }}</a>
                 </li>
             </ul>
 
@@ -164,7 +164,7 @@ export default{
 
 <style>
 footer{
-    height: 300px;
+    height: 320px;
     background-image: url(/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -179,13 +179,18 @@ footer{
 }
 
 #footer-links-container{
-    padding: 2.5rem 1rem 0;
+    padding: 1rem 1rem 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
 .links-head{
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+.links-list {
+    margin-right: 1.5rem;
 }
 </style>
