@@ -21,17 +21,25 @@
   
   .container{
     margin: 0 auto;
-    max-width: 1170px;
+    width: 1170px;
   }
   
   .d-flex{
     display: flex;
+  }
+
+  .flex-wrap{
+    flex-wrap: wrap;
   }
   
   .justify-content-between{
     justify-content: space-between;
   }
   
+  .justify-content-around{
+    justify-content: space-around;
+  }
+
   .align-center{
     align-items: center;
   }
@@ -46,6 +54,9 @@
   
   .text-decoration-none{
     text-decoration: none;
+  }
+  .text-no-wrap{
+      white-space: nowrap;
   }
   
   .d-block{
@@ -64,7 +75,16 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+
+  .pes-5{
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
   
+  .ms-3{
+    margin-left: 1rem;
+  }
+
   .mes-3{
     margin-left: 1rem;
     margin-right: 1rem;

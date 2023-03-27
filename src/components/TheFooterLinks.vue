@@ -189,7 +189,7 @@ export default{
 
     <div id="footer-bottom">
         <div class="container h-100 d-flex justify-content-between align-center">
-            <a id="signUpBtn" class="text-white text-decoration-none" href="#">SIGN UP NOW!</a>
+            <a id="signUpBtn" class="text-white text-decoration-none" href="#">SIGN-UP NOW!</a>
             <ul class="d-flex align-center list-style-none">
                 <li class="m-3">
                     <h3 class="secondary-text-color">FOLLOW US</h3>
