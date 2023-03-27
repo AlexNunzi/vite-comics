@@ -71,15 +71,15 @@ export default{
 
 <style scoped>
     header{
-        height: 120px;
+        height: 7.5rem;
     }
 
     #logo{
-        height: 80px;
+        height: 5rem;
     }
 
     .navLinkContainer{
-        line-height: 120px;
+        line-height: 7.5rem;
         height: 100%;
     }
 

@@ -34,10 +34,15 @@ export default{
   --primary-color: #000000;
   --secondary-color: #0082F9;
   --terthiary-color: #959696;
+  --footer-bottom-bg: #303030;
 }
 
 .primary-text-color{
   color: var(--primary-color);
+}
+
+.secondary-text-color{
+  color: var(--secondary-color);
 }
 
 .terthiary-text-color{
@@ -83,6 +88,14 @@ export default{
 
 .p-3{
   padding: 1rem;
+}
+
+.m-2{
+  margin: 0.5rem
+}
+
+.m-3{
+  margin: 1rem;
 }
 
 main{
