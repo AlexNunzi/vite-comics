@@ -2,6 +2,52 @@
 
 export default{
     name: 'TheHeader',
+    data(){
+        return{
+            navLinks: [
+                {
+                    href: '#characters',
+                    text: 'Characters'
+                },
+                {
+                    href: '#comics',
+                    text: 'Comics'
+                },
+                {
+                    href: '#movies',
+                    text: 'Movies'
+                },
+                {
+                    href: '#tv',
+                    text: 'Tv'
+                },
+                {
+                    href: '#games',
+                    text: 'Games'
+                },
+                {
+                    href: '#collectibles',
+                    text: 'Collectibles'
+                },
+                {
+                    href: '#videos',
+                    text: 'Videos'
+                },
+                {
+                    href: '#fans',
+                    text: 'Fans'
+                },
+                {
+                    href: '#news',
+                    text: 'News'
+                },
+                {
+                    href: '#shop',
+                    text: 'Shop'
+                }
+            ]
+        }
+    }
 }
 
 </script>
@@ -12,14 +58,8 @@ export default{
             <img id="logo" src="/dc-logo.png" alt="DC logo">
             <nav class="h-100">
                 <ul class="list-style-none h-100 d-flex align-center">
-                    <li class="navLinkContainer">
-                        <a class="p-3 text-decoration-none primary-text-color" href="#">Link</a>
-                    </li>
-                    <li class="navLinkContainer selected-link">
-                        <a class="p-3 text-decoration-none primary-text-color" href="#">Link</a>
-                    </li>
-                    <li class="navLinkContainer">
-                        <a class="p-3 text-decoration-none primary-text-color" href="#">Link</a>
+                    <li v-for="link in navLinks" class="navLinkContainer">
+                        <a class="p-3 text-decoration-none primary-text-color" :href="link.href">{{ link.text.toUpperCase() }}</a>
                     </li>
                 </ul>
             </nav>
@@ -49,5 +89,7 @@ export default{
 
     .selected-link a{
         color: var(--secondary-color);
+        font-weight: bold;
+        font-size: 0.75rem;
     }
 </style>

@@ -1,11 +1,14 @@
 <script>
 
 import TheHeader from "./components/TheHeader.vue";
-import Navigation from"./components/Navigation.vue";
+import Navigation from "./components/Navigation.vue";
+import FooterLinks from "./components/TheFooterLinks.vue";
+
 export default{
   components:{
     TheHeader,
     Navigation,
+    FooterLinks,
   }
 }
 </script>
@@ -22,16 +25,23 @@ export default{
 
 <Navigation />
 
+<FooterLinks />
+
 </template>
 
 <style>
 :root{
   --primary-color: #000000;
   --secondary-color: #0082F9;
+  --terthiary-color: #959696;
 }
 
 .primary-text-color{
   color: var(--primary-color);
+}
+
+.terthiary-text-color{
+  color: var(--terthiary-color);
 }
 
 .container{
@@ -81,6 +91,10 @@ main{
 
 .main-content{
   height: 200px;
+  color: #FFFFFF;
+}
+
+.text-white{
   color: #FFFFFF;
 }
 
