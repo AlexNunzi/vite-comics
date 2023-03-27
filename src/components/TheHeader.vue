@@ -4,6 +4,7 @@ export default{
     name: 'TheHeader',
     data(){
         return{
+            selectedLink: 0,
             navLinks: [
                 {
                     href: '#characters',
@@ -58,8 +59,8 @@ export default{
             <img id="logo" src="/dc-logo.png" alt="DC logo">
             <nav class="h-100">
                 <ul class="list-style-none h-100 d-flex align-center">
-                    <li v-for="link in navLinks" class="navLinkContainer">
-                        <a class="p-3 text-decoration-none primary-text-color" :href="link.href">{{ link.text.toUpperCase() }}</a>
+                    <li v-for="(link, i) in navLinks" class="navLinkContainer mes-3" :class="selectedLink == i ? 'selected-link':''">
+                        <a class="ptb-05 text-decoration-none primary-text-color" :href="link.href">{{ link.text.toUpperCase() }}</a>
                     </li>
                 </ul>
             </nav>
@@ -69,7 +70,9 @@ export default{
 
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+    @use "../styles/variables";
+
     header{
         height: 7.5rem;
     }
@@ -81,15 +84,18 @@ export default{
     .navLinkContainer{
         line-height: 7.5rem;
         height: 100%;
+        font-size: 0.75rem;
     }
 
+    .navLinkContainer:hover:not(.selected-link){
+        border-bottom: 5px solid lighten(variables.$secondary-color, 30); 
+    }
     .selected-link{
-        border-bottom: 5px solid var(--secondary-color);
+        border-bottom: 5px solid variables.$secondary-color;
     }
 
     .selected-link a{
-        color: var(--secondary-color);
+        color: variables.$secondary-color;
         font-weight: bold;
-        font-size: 0.75rem;
     }
 </style>

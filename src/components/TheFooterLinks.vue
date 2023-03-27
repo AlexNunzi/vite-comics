@@ -208,7 +208,9 @@ export default{
 
 </template>
 
-<style>
+<style lang="scss">
+@use "../styles/variables";
+
 #footer-top{
     height: 20rem;
     background-image: url(/footer-bg.jpg);
@@ -242,11 +244,11 @@ export default{
 
 #footer-bottom{
     height: 7.5rem;
-    background-color: var(--footer-bottom-bg);
+    background-color: variables.$footer-bottom-bg;
 }
 
 #signUpBtn{
     padding: 1rem;
-    border: 2px solid var(--secondary-color);
+    border: 2px solid variables.$secondary-color;
 }
 </style>
