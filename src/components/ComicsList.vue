@@ -15,7 +15,9 @@ export default{
 
         <ul class="d-flex flex-wrap list-style-none">
             <li class="comic-card text-white" v-for="(comic, i) in comicsList">
-                <img class="comic-img mb-2" :src="comic.thumb" :alt="comic.series">
+                <a href="#">
+                    <img class="mb-2 d-block" :src="comic.thumb" :alt="comic.series">
+                </a>
                 <h4 class="fs-075">{{ comic.series }}</h4>
             </li>
         </ul>
@@ -35,16 +37,21 @@ export default{
     background-position-y: 0px;
 }
 
-.comic-img{
+.comic-card{
+    width: calc(100% / 6);
+    padding: 1rem;
+
+    & img{
     height: 11rem;
     width: 11rem;
     object-fit: cover;
     object-position: top;
-}
+    }
 
-.comic-card{
-    width: calc(100% / 6);
-    padding: 1rem;
+    & a:hover img{
+        transition: 0.25s;
+        scale: 1.01;
+    }
 }
 
 #cards-info{

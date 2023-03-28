@@ -189,7 +189,7 @@ export default{
 
     <div id="footer-bottom">
         <div class="container h-100 d-flex justify-content-between align-center">
-            <a id="signUpBtn" class="text-white text-decoration-none" href="#">SIGN-UP NOW!</a>
+            <a id="signUpBtn" class="text-white text-decoration-none" href="#SignUp">SIGN-UP NOW!</a>
             <ul class="d-flex align-center list-style-none">
                 <li class="m-3">
                     <h3 class="secondary-text-color">FOLLOW US</h3>
@@ -240,6 +240,11 @@ export default{
 
 .links-list {
     margin-right: 1.5rem;
+
+    & a:hover{
+        transition: 0.25s;
+        color: lighten(variables.$terthiary-color, 50);
+    }
 }
 
 #footer-bottom{
@@ -250,5 +255,20 @@ export default{
 #signUpBtn{
     padding: 1rem;
     border: 2px solid variables.$secondary-color;
+    background-color: variables.$footer-bottom-bg;
+    &:hover{
+        cursor: pointer;
+        transition: background-color 0.25s;
+        transition: scale 0.25s;
+        background-color: lighten(variables.$footer-bottom-bg, 1);
+        scale: 1.01;
+    }
+
+    &:active{
+        transition: background-color 0.25s;
+        transition: scale 0.25s;
+        background-color: darken(variables.$footer-bottom-bg, 1);
+        scale: 0.99;
+    }
 }
 </style>
