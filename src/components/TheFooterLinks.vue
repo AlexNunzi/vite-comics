@@ -250,6 +250,16 @@ export default{
 #footer-bottom{
     height: 7.5rem;
     background-color: variables.$footer-bottom-bg;
+
+    & a:hover img{
+        transition: scale 0.25s;
+        scale: 1.1;
+    }
+
+    & a:active img{
+        transition: scale 0.25s;
+        scale: 1;
+    }
 }
 
 #signUpBtn{
