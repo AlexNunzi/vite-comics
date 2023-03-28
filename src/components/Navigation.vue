@@ -47,7 +47,7 @@
         <ul class="list-style-none d-flex align-center justify-content-around flex-wrap">
             <li v-for="(link, i) in navigationLinks" class="navigationCard">
                 <a :href="link.href" class="fs-075 text-decoration-none text-white d-flex align-center p-3">
-                    <img :src="getImagePath(link.icon)" :alt="link.text" class="icon" :key="`immagine-${i}`" />
+                    <img :src="getImagePath(link.icon)" :alt="link.text" class="icon me-3" :key="`immagine-${i}`" />
                     {{ link.text.toUpperCase() }}
                 </a>
             </li>
