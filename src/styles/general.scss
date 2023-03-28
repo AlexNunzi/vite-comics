@@ -21,7 +21,7 @@
   
   .container{
     margin: 0 auto;
-    width: 1170px;
+    max-width: 1170px;
   }
   
   .d-flex{
@@ -70,6 +70,14 @@
   .p-3{
     padding: 1rem;
   }
+
+  .pt-4{
+    padding-top: 1.5rem;
+  }
+
+  .pb-3{
+    padding-bottom: 1rem;
+  }
   
   .ptb-05{
     padding-top: 0.5rem;
@@ -81,8 +89,16 @@
     padding-right: 3rem;
   }
   
+  .m-auto{
+    margin: auto;
+  }
+
   .ms-3{
     margin-left: 1rem;
+  }
+
+  .mb-2{
+    margin-bottom: 0.5rem;
   }
 
   .mes-3{
@@ -99,18 +115,26 @@
   }
   
   main{
-    background-color: black;
-  }
-  
-  .main-content{
-    height: 200px;
-    color: #FFFFFF;
+    background-color: variables.$fourthiary-color;
   }
   
   .text-white{
-    color: #FFFFFF;
+    color: variables.$text-white;
   }
   
   .fs-075{
     font-size: 0.75rem;
+  }
+
+  .fs-125{
+    font-size: 1.25rem;
+  }
+
+  .fw-bold{
+    font-weight: bold;
+  }
+
+  .bg-tag{
+    background-color: variables.$secondary-color; 
+    border: none;
   }

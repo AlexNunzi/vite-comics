@@ -194,9 +194,9 @@ export default{
                 <li class="m-3">
                     <h3 class="secondary-text-color">FOLLOW US</h3>
                 </li>
-                <li v-for="link in footerBottomLinks" class="m-2">
+                <li v-for="(link, i) in footerBottomLinks" class="m-2">
                     <a :href="link.href">
-                        <img :src="getImagePath(link.icon)" :alt="link.text">
+                        <img :src="getImagePath(link.icon)" :alt="link.text" :key="`immagine2-${i}`" />
                     </a>
                 </li>
             </ul>

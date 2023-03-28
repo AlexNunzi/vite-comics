@@ -3,7 +3,7 @@
         name: 'Navigation',
         data(){
             return {
-                footerBottomLinks: [
+                navigationLinks: [
                 {
                     text: 'Digital Comics',
                     href: '#digitalComics',
@@ -45,8 +45,8 @@
 <div class="navigation-container d-flex align-center">
     <div class="container pes-5">
         <ul class="list-style-none d-flex align-center justify-content-around flex-wrap">
-            <li v-for="link in footerBottomLinks" class="navigationCard d-flex align-center">
-                <img :src="getImagePath(link.icon)" :alt="link.text" class="icon">
+            <li v-for="(link, i) in navigationLinks" class="navigationCard d-flex align-center">
+                <img :src="getImagePath(link.icon)" :alt="link.text" class="icon" :key="`immagine-${i}`" />
                 <a :href="link.href" class="fs-075 ms-3 text-decoration-none text-white">{{ link.text.toUpperCase() }}</a>
             </li>
         </ul>
