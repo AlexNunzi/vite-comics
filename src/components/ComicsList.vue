@@ -24,7 +24,8 @@ export default{
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@use "../styles/partials/variables";
 .jumbotron{
     height: 25rem;
     background-image: url(/jumbotron.jpg);
@@ -55,6 +56,21 @@ export default{
 }
 .load-btn{
     padding: 0.75rem 3.5rem;
+
+    &:hover{
+        cursor: pointer;
+        transition: background-color 0.25s;
+        transition: scale 0.25s;
+        background-color: lighten(variables.$secondary-color, 5);
+        scale: 1.01;
+    }
+
+    &:active{
+        transition: background-color 0.25s;
+        transition: scale 0.25s;
+        background-color: darken(variables.$secondary-color, 5);
+        scale: 0.99;
+    }
 }
 
 #cards{
